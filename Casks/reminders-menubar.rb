@@ -1,6 +1,6 @@
 cask "reminders-menubar" do
-  version "1.12.0"
-  sha256 "d3e0a31f3b153c4f85192309b809c5a18a44bcbaea9268052617b5adf0ba4dec"
+  version "1.12.1"
+  sha256 "fbb7082d25649c19c0653c28e01e8d03caae0b1f0a07610e94f525bfc56e3310"
 
   url "https://github.com/DamascenoRafael/reminders-menubar/releases/download/v#{version}/reminders-menubar.zip"
   appcast "https://github.com/DamascenoRafael/reminders-menubar/releases.atom"
