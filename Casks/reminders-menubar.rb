@@ -19,6 +19,4 @@ cask "reminders-menubar" do
       system_command "/usr/bin/open", args: ["-a", application], must_succeed: true
     end
   end
-
-  uninstall signal: ["KILL", "br.com.damascenorafael.reminders-menubar"]
 end
