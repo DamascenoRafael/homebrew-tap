@@ -20,5 +20,5 @@ cask "reminders-menubar" do
     end
   end
 
-  uninstall quit: "br.com.damascenorafael.reminders-menubar"
+  uninstall signal: ["TERM", "br.com.damascenorafael.reminders-menubar"],
 end
