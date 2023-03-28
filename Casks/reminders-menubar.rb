@@ -21,5 +21,5 @@ cask "reminders-menubar" do
   end
 
   uninstall login_item: "Reminders Menu Bar"
-            quit:       "br.com.damascenorafael.reminders-menubar"
+            quit: "br.com.damascenorafael.reminders-menubar"
 end
