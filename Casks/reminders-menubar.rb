@@ -3,7 +3,6 @@ cask "reminders-menubar" do
   sha256 "a23d69d5ee3b76af59947309b0ed254f2adfddf8055597c879dd9e216f286ad9"
 
   url "https://github.com/DamascenoRafael/reminders-menubar/releases/download/v#{version}/reminders-menubar.zip"
-  appcast "https://github.com/DamascenoRafael/reminders-menubar/releases.atom"
   name "Reminders Menu Bar"
   desc "Simple menu bar app to view and interact with reminders"
   homepage "https://github.com/DamascenoRafael/reminders-menubar"
