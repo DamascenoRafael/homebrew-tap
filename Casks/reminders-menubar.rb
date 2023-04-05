@@ -1,21 +1,22 @@
 cask "reminders-menubar" do
-  version "1.16.0"
-  sha256 "a23d69d5ee3b76af59947309b0ed254f2adfddf8055597c879dd9e216f286ad9"
+  version "1.16.1"
+  sha256 "c561c9926a1b893468c97121d69657f34eaf4720bc0dff8bbd303c2c02a84e87"
 
   url "https://github.com/DamascenoRafael/reminders-menubar/releases/download/v#{version}/reminders-menubar.zip"
-  name "Reminders Menu Bar"
+  name "Reminders MenuBar"
   desc "Simple menu bar app to view and interact with reminders"
   homepage "https://github.com/DamascenoRafael/reminders-menubar"
 
   depends_on macos: ">= :big_sur"
 
-  app "Reminders Menu Bar.app"
+  app "Reminders MenuBar.app"
 
   postflight do
-    application = "#{appdir}/Reminders Menu Bar.app"
-    if system_command("ps", args: ["x"]).stdout.match?(application)
-      system_command "/usr/bin/pkill", args: ["-f", application], must_succeed: true
-      system_command "/usr/bin/open", args: ["-a", application], must_succeed: true
+    old_application = "#{appdir}/Reminders Menu Bar.app"
+    application = "#{appdir}/Reminders MenuBar.app"
+    if system_command("ps", args: ["x"]).stdout.match?(old_application)
+      system_command "/usr/bin/pkill", args: ["-f", old_application], must_succeed: false
+      system_command "/usr/bin/open", args: ["-a", application], must_succeed: false
     end
   end
 end
