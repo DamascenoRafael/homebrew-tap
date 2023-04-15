@@ -1,6 +1,6 @@
 cask "reminders-menubar" do
-  version "1.16.1"
-  sha256 "c561c9926a1b893468c97121d69657f34eaf4720bc0dff8bbd303c2c02a84e87"
+  version "1.17.0"
+  sha256 "e3fdf46b3fc339bde71a14296f544c74ca099058d3845e86aca0d2fdcf8557fe"
 
   url "https://github.com/DamascenoRafael/reminders-menubar/releases/download/v#{version}/reminders-menubar.zip"
   name "Reminders MenuBar"
@@ -12,10 +12,9 @@ cask "reminders-menubar" do
   app "Reminders MenuBar.app"
 
   postflight do
-    old_application = "#{appdir}/Reminders Menu Bar.app"
     application = "#{appdir}/Reminders MenuBar.app"
-    if system_command("ps", args: ["x"]).stdout.match?(old_application)
-      system_command "/usr/bin/pkill", args: ["-f", old_application], must_succeed: false
+    if system_command("ps", args: ["x"]).stdout.match?(application)
+      system_command "/usr/bin/pkill", args: ["-f", application], must_succeed: false
       system_command "/usr/bin/open", args: ["-a", application], must_succeed: false
     end
   end
